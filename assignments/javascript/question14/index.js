@@ -1,9 +1,3 @@
-var person = "adeel"
-
-console.log("lowercase: ",person.toLowerCase())
-console.log("UPPERCASE: ",person.toUpperCase())
-
-
 String.prototype.toTitleCase = function() {
     return this.replace( 
         /\w\S*/g
@@ -14,7 +8,8 @@ String.prototype.toTitleCase = function() {
         )
 }
 
-console.log("Title Case: ",
-    "adeel malik developer".toTitleCase()
-    
-)
+
+const guestsNames = ['Dr. Zia Khan', 'danial nagori','ali','murtaza']
+
+
+    guestsNames.map(name => console.log(`Hello, ${name.toTitleCase()}, I would like to invite you at dinner tomorrow!`))
