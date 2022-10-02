@@ -68,6 +68,9 @@ const changingGuestlist = (guestNotComing, newFriends) => {
 
       filteredNames.map(name=>console.log(`${name.toTitleCase()} you are still invited as per plan so be ready`))
 
+    console.log(`Total invites of the dinner is now ${filteredNames.length}`) //Nummber of geusts at dinner
+
+
 
 
     
