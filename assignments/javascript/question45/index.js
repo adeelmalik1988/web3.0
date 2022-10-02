@@ -3,22 +3,71 @@
 
 
 //const make_great = (mag_list) => mag_list = mag_list.map(mag => 'Great ' + mag)
-const sandwiches = (sandwiches_items) => {
-    
-    let sandwiches_items_array = [...sandwiches_items]
-    
-    console.log('Summary of Order',sandwiches_items_array)
-    
-   
+const cars = (attr) => {
+
+    let cars_object = new Object()
+
+    // cars_object.manufacturer = manufacturer
+    // cars_object.model = model
+    // cars_object[`${name1}`] = value1
+    // cars_object[`name2`] = value2
+
+    let manufacturerExist = false
+    let modalExist = false
+
+    for ( let keys in attr ) {
+        if(keys == 'manufacturer' ){
+        //&& keys == 'modal' ){
+            manufacturerExist = true
+            //console.log(attr[keys])
+        } else if(keys == 'modal' ){
+            //&& keys == 'modal' ){
+                modalExist = true
+               // console.log(attr[keys])
+            }
+        
+
+    }
+
+    if(manufacturerExist && modalExist) {
+        cars_object = {...attr}
+        
+    }
+
+
+
+
+
+    console.log('Car Details :', cars_object)
+
+
 }
 
 
-sandwiches(['Fried Bread','Egg','Salad','Kabab'])
-sandwiches(['Fried Bread','Egg','Salad','Kabab','Mayo','kachhap'])
-sandwiches(['Fried Bread','Salad','Kabab','Mayo','kachhap'])
-// sandwiches('Atif', 'Aadat')
-// sandwiches('quratulain balouch', 'kaari kaari', 10)
-//ordinalNumber1to9("adeel")
-//ordinalNumber1to9("taimoor")
-// userGreetings("habib")
+cars({
+    manufacturer: "Suzuki",
+    modal: '2010',
+    color: 'white',
+    breaks: 'normal'
+})
 
+cars({
+    manufacturer: "Suzuki",
+    //modal: '2010',
+    color: 'white',
+    breaks: 'abs'
+})
+
+cars({
+    //manufacturer: "Suzuki",
+    //modal: '2010',
+    color: 'white',
+    breaks: 'abs'
+})
+
+cars({
+    manufacturer: "Honda",
+    modal: '2016',
+    mileage: 12,
+    breaks: 'abs'
+})
